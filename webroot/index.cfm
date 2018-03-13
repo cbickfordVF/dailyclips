@@ -27,22 +27,17 @@
 <cfparam name="form.submit" default="">
 
 <cfif len(form.submit)>
+
+  <style>
+  body {
+      font-size: 13px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+  </style>
   <hr>
   <cfoutput>
-
-    <h2>#outlet#</h2>
-    <h2><a href="#weblink#" target="_blank">#title#</a></h2>
-
-
+    <h2>#outlet#: <a href="#weblink#" target="_blank">#title#</a></h2>
     <cfset newLine = Chr(13) & Chr(10)>
-
-    <cfoutput>
-    #Replace(form.copy, newLine, "<br>", "ALL")#
-    </cfoutput>
-
-    <p>#copy#</p>
-
-<!--- #htmlCodeFormat('<b>#form.title#</b>')# --->
-
+      #Replace(form.copy, newLine, "<br>", "ALL")#
   </cfoutput>
 </cfif>
