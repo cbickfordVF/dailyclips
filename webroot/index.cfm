@@ -32,6 +32,14 @@
 
     <h2>#outlet#</h2>
     <h2><a href="#weblink#" target="_blank">#title#</a></h2>
+
+
+    <cfset newLine = Chr(13) & Chr(10)>
+
+    <cfoutput>
+    #Replace(form.copy, newLine, "<br>", "ALL")#
+    </cfoutput>
+
     <p>#copy#</p>
 
 <!--- #htmlCodeFormat('<b>#form.title#</b>')# --->
