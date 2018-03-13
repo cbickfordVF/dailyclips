@@ -1,10 +1,9 @@
-
-
 <form action="" method="post">
   <table>
-
-    Outlet: article Title  <-- linked
-
+  <tr>
+    <td>Outlet:</td>
+    <td><input type="text" name="outlet" size="98"></td>
+  </tr>
   <tr>
     <td>Title:</td>
     <td><input type="text" name="title" size="98"></td>
@@ -21,17 +20,21 @@
   </table>
 </form>
 
+<cfparam name="form.outlet" default="">
+<cfparam name="form.title" default="">
+<cfparam name="form.copy" default="">
+<cfparam name="form.weblink" default="">
 <cfparam name="form.submit" default="">
+
 <cfif len(form.submit)>
   <hr>
   <cfoutput>
-    <h2>Outlet</h2>
-    <br>
-    <h2>Title</h2>
 
-    <p>Copy</p>
+    <h2>#outlet#</h2>
+    <h2><a href="#weblink#" target="_blank">#title#</a></h2>
+    <p>#copy#</p>
 
+<!--- #htmlCodeFormat('<b>#form.title#</b>')# --->
 
-    #htmlCodeFormat('<b>#form.title#</b>')#
   </cfoutput>
 </cfif>
