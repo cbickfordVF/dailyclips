@@ -55,13 +55,11 @@
       <td class="titleField" valign="top">Copy:</td>
       <td><textarea name ="copy" rows="20" cols="100"></textarea></td>
     </tr>
-    <tr><td></td><td><input type="Submit" name="submit" value="Submit"></td></tr>
+    <tr><td></td><td><input type="Submit" name="submit" value="Submit"><div style="float:right;"><button onclick="copyToClip(document.getElementById('foo').innerHTML)">
+      Copy the stuff
+    </button></div></td></tr>
   </table>
 </form>
-
-<button onclick="copyToClip(document.getElementById('foo').innerHTML)">
-  Copy the stuff
-  </button>
 
 <cfparam name="form.outlet" default="">
 <cfparam name="form.title" default="">
