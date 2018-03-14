@@ -68,7 +68,7 @@
 <cfparam name="form.submit" default="">
 
 <cfif len(form.submit)>
-  <div align="center">
+  <div align="left" style="padding-left:70px;">
   <button onclick="copyToClip(document.getElementById('foo').innerHTML)">
     Copy the stuff
   </button>
