@@ -21,7 +21,7 @@
 </script>
 
 <style>
-  body {
+  * {
     font-size: 13px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   }
@@ -55,9 +55,12 @@
       <td class="titleField" valign="top">Copy:</td>
       <td><textarea name ="copy" rows="20" cols="100"></textarea></td>
     </tr>
-    <tr><td></td><td><input type="Submit" name="submit" value="Submit"><div style="float:right;"><button onclick="copyToClip(document.getElementById('foo').innerHTML)">
-      Copy the stuff
-    </button></div></td></tr>
+    <tr>
+      <td></td>
+      <td>
+        <input type="Submit" name="submit" value="Submit">
+      </td>
+    </tr>
   </table>
 </form>
 
@@ -69,6 +72,11 @@
 <cfparam name="form.submit" default="">
 
 <cfif len(form.submit)>
+  <div align="center">
+  <button onclick="copyToClip(document.getElementById('foo').innerHTML)">
+    Copy the stuff
+  </button>
+  </div>
   <hr>
   <cfoutput>
     <div id="foo">
@@ -78,5 +86,4 @@
       #Replace(form.copy, newLine, "<br>", "ALL")#
     </div>
   </cfoutput>
-
 </cfif>
