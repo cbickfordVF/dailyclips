@@ -76,10 +76,10 @@
   <hr>
   <cfoutput>
     <div id="foo">
-      <p style="font-size: 13px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;"><a href="#weblink#" target="_blank">#outlet#: #title#</a></p>
-      <p style="font-size: 10px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;">#date#</p>
+      <h2><span style='font-size:13.5pt;font-family:"Arial",sans-serif'><a href="#weblink#" target="_blank">#outlet#: #title#</a></span></h2>
+      <p><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>#date#</span></p>
       <cfset newLine = Chr(13) & Chr(10)>
-      <p style="font-size: 10px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;">#Replace(form.copy, newLine, "<br>", "ALL")#</p>
+      <p><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>#Replace(form.copy, newLine, "<br>", "ALL")#</span></p>
     </div>
   </cfoutput>
 </cfif>
