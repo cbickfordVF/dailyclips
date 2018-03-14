@@ -1,13 +1,23 @@
 
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="https://code.jquery.com/resources/demos/style.css">
+<script src="/assets/js/jquery-1.12.4.js"></script>
+<script src="/assets/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/assets/css/jquery-ui.css">
 
 <script>
   $( function() {
     $( "#datepicker" ).datepicker({dateFormat: 'MM d, yy'});
   } );
+
+  function copyToClip(str) {
+    function listener(e) {
+      e.clipboardData.setData("text/html", str);
+      e.clipboardData.setData("text/plain", str);
+      e.preventDefault();
+    }
+    document.addEventListener("copy", listener);
+    document.execCommand("copy");
+    document.removeEventListener("copy", listener);
+  };
 </script>
 
 <style>
@@ -49,6 +59,10 @@
   </table>
 </form>
 
+<button onclick="copyToClip(document.getElementById('foo').innerHTML)">
+  Copy the stuff
+  </button>
+
 <cfparam name="form.outlet" default="">
 <cfparam name="form.title" default="">
 <cfparam name="form.date" default="">
@@ -59,9 +73,12 @@
 <cfif len(form.submit)>
   <hr>
   <cfoutput>
-    <h2>#outlet#: <a href="#weblink#" target="_blank">#title#</a></h2>
-    <p>#date#</p>
-    <cfset newLine = Chr(13) & Chr(10)>
+    <div id="foo">
+      <h2><a href="#weblink#" target="_blank">#outlet#: #title#</a></h2>
+      <p>#date#</p>
+      <cfset newLine = Chr(13) & Chr(10)>
       #Replace(form.copy, newLine, "<br>", "ALL")#
+    </div>
   </cfoutput>
+
 </cfif>
