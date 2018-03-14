@@ -21,10 +21,6 @@
 </script>
 
 <style>
-  * {
-    font-size: 13px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  }
   .titleField {
     font-weight: bold;
     text-align:right;
@@ -80,10 +76,10 @@
   <hr>
   <cfoutput>
     <div id="foo">
-      <h2><a href="#weblink#" target="_blank">#outlet#: #title#</a></h2>
-      <p>#date#</p>
+      <p style="font-size: 13px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;"><a href="#weblink#" target="_blank">#outlet#: #title#</a></p>
+      <p style="font-size: 10px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;">#date#</p>
       <cfset newLine = Chr(13) & Chr(10)>
-      #Replace(form.copy, newLine, "<br>", "ALL")#
+      <p style="font-size: 10px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;">#Replace(form.copy, newLine, "<br>", "ALL")#</p>
     </div>
   </cfoutput>
 </cfif>
