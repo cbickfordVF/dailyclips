@@ -76,7 +76,7 @@
   <hr>
   <cfoutput>
     <div id="foo">
-      <h2><span style='font-size:13.5pt;font-family:"Arial",sans-serif'><a href="#weblink#" target="_blank">#outlet#: #title#</a></span></h2>
+      <h2><span style='font-size:13.5pt;font-family:"Arial",sans-serif;font-wight:bold;'><a href="#weblink#" target="_blank">#outlet#: #title#</a></span></h2>
       <p><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>#date#</span></p>
       <cfset newLine = Chr(13) & Chr(10)>
       <p><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>#Replace(form.copy, newLine, "<br>", "ALL")#</span></p>
