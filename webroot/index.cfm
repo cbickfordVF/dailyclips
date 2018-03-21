@@ -32,7 +32,7 @@
     <tr>
       <td class="titleField">Date:</td>
       <cfoutput>
-        <td><input type="text" id="datepicker" size="10" value="#dateformat(now()-2, "mmmm d, yyyy")#" name="date"></td>
+        <td><input type="text" id="datepicker" size="10" value="#dateformat(now()-1, "mmmm d, yyyy")#" name="date"></td>
       </cfoutput>
     </tr>
     <tr>
