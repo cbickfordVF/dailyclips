@@ -3,7 +3,7 @@
 <script src="/assets/js/jquery-ui.js"></script>
 <link rel="stylesheet" href="/assets/css/jquery-ui.css">
 
-<cfparam name="newLine" value="Chr(13) & Chr(10)">
+<cfparam name="newLineVar" value="Chr(13) & Chr(10)">
 
 <script>
   $( function() {
@@ -80,8 +80,8 @@
     <div id="foo">
       <h2><span style='font-size:13.5pt;font-family:"Arial",sans-serif;font-weight:bold;'><a href="#weblink#" target="_blank">#outlet#: #title#</a></span></h2>
       <p><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>#date#</span></p>
-      <cfset newLine = Chr(13) & Chr(10)>
-      <p><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>#Replace(form.copy, newLine, "<br>", "ALL")#</span></p>
+      <cfset newLineVar = Chr(13) & Chr(10)>
+      <p><span style='font-size:10.0pt;font-family:"Arial",sans-serif'>#Replace(form.copy, newLineVar, "<br>", "ALL")#</span></p>
     </div>
   </cfoutput>
 </cfif>
