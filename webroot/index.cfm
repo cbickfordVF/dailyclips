@@ -3,6 +3,8 @@
 <script src="/assets/js/jquery-ui.js"></script>
 <link rel="stylesheet" href="/assets/css/jquery-ui.css">
 
+<cfparam name="newLine" value="Chr(13) & Chr(10)">
+
 <script>
   $( function() {
     $( "#datepicker" ).datepicker({dateFormat: 'MM d, yy'});
