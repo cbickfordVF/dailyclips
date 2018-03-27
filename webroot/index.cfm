@@ -3,7 +3,7 @@
 <script src="/assets/js/jquery-ui.js"></script>
 <link rel="stylesheet" href="/assets/css/jquery-ui.css">
 
-<cfparam name="newLineVar" value="Chr(13) & Chr(10)">
+<cfparam name="newLineVar" default="Chr(13) & Chr(10)">
 
 <script>
   $( function() {
